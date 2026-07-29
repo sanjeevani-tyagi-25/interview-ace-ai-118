@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/landing/Navbar";
+import { Footer } from "@/components/landing/Footer";
+import { Hero } from "@/components/landing/Hero";
+import { TrustedBy } from "@/components/landing/TrustedBy";
+import { Stats } from "@/components/landing/Stats";
+import { Features } from "@/components/landing/Features";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { Testimonials } from "@/components/landing/Testimonials";
+import { FAQ } from "@/components/landing/FAQ";
+import { CTA } from "@/components/landing/CTA";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "InterviewAI — Crack Your Next Interview with AI" },
+      {
+        name: "description",
+        content:
+          "AI-powered mock interviews across HR, DSA, ML and System Design. Practice, get instant feedback, and land your dream offer.",
+      },
+      { property: "og:title", content: "InterviewAI — AI Powered Mock Interview Platform" },
+      {
+        property: "og:description",
+        content: "Practice mock interviews with an AI that adapts to you. Free to start.",
+      },
+    ],
+  }),
+  component: LandingPage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function LandingPage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustedBy />
+        <Features />
+        <Stats />
+        <HowItWorks />
+        <Testimonials />
+        <FAQ />
+        <CTA />
+      </main>
+      <Footer />
     </div>
   );
 }
