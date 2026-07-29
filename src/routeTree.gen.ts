@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
@@ -24,6 +25,11 @@ import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile
 import { Route as DashboardInterviewRouteImport } from './routes/dashboard.interview'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard.history'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RegisterRoute = RegisterRouteImport.update({
   id: '/register',
   path: '/register',
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/how-it-works': typeof HowItWorksRoute
   '/login': typeof LoginRoute
   '/register': typeof RegisterRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/interview': typeof DashboardInterviewRoute
   '/dashboard/profile': typeof DashboardProfileRoute
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/how-it-works': typeof HowItWorksRoute
   '/login': typeof LoginRoute
   '/register': typeof RegisterRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/interview': typeof DashboardInterviewRoute
   '/dashboard/profile': typeof DashboardProfileRoute
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/how-it-works': typeof HowItWorksRoute
   '/login': typeof LoginRoute
   '/register': typeof RegisterRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/interview': typeof DashboardInterviewRoute
   '/dashboard/profile': typeof DashboardProfileRoute
@@ -152,6 +161,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/login'
     | '/register'
+    | '/sitemap.xml'
     | '/dashboard/history'
     | '/dashboard/interview'
     | '/dashboard/profile'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/login'
     | '/register'
+    | '/sitemap.xml'
     | '/dashboard/history'
     | '/dashboard/interview'
     | '/dashboard/profile'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/login'
     | '/register'
+    | '/sitemap.xml'
     | '/dashboard/history'
     | '/dashboard/interview'
     | '/dashboard/profile'
@@ -200,10 +212,18 @@ export interface RootRouteChildren {
   HowItWorksRoute: typeof HowItWorksRoute
   LoginRoute: typeof LoginRoute
   RegisterRoute: typeof RegisterRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/register': {
       id: '/register'
       path: '/register'
@@ -338,6 +358,7 @@ const rootRouteChildren: RootRouteChildren = {
   HowItWorksRoute: HowItWorksRoute,
   LoginRoute: LoginRoute,
   RegisterRoute: RegisterRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
