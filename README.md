@@ -1,453 +1,374 @@
-# Interview AI Pro
+# 🚀 InterviewAI – AI Powered Mock Interview Platform
 
-Build a modern, premium, responsive React + Tailwind CSS web application called InterviewAI – AI Powered Mock Interview Platform.
+![InterviewAI](https://img.shields.io/badge/Project-AI%20Interview%20Platform-blue)
+![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20TailwindCSS-61DAFB)
+![Backend](https://img.shields.io/badge/Backend-FastAPI-green)
+![AI](https://img.shields.io/badge/AI-LLM%20Powered-purple)
 
-The design should feel like ChatGPT, Vercel, Linear, and Notion combined: clean, minimal, professional, with smooth animations and rounded cards.
+## 📌 Overview
 
-Color Theme
+**InterviewAI** is an AI-powered mock interview platform designed to help students and job seekers prepare for technical and behavioral interviews.
 
- Primary: #2563EB
+The platform provides realistic AI interview simulations, resume analysis, performance evaluation, and personalized improvement suggestions.
 
- Secondary: #14B8A6
+InterviewAI aims to bridge the gap between traditional interview preparation and real-world interview experiences by using Artificial Intelligence, Natural Language Processing, and Data Analytics.
 
- Background: #F8FAFC
+---
 
- Cards: White
+# ✨ Key Features
 
- Accent: Purple gradients for AI sections
+## 🤖 AI Mock Interview
 
-Navigation
+Practice interviews with an AI interviewer.
 
-Create a responsive navbar with:
+Supported interview categories:
 
- Logo: InterviewAI
+* HR Interview
+* Data Structures & Algorithms
+* Machine Learning
+* Data Science
+* System Design
+* Aptitude
 
- Home
+Difficulty levels:
 
- Features
+* Easy
+* Medium
+* Hard
 
- How It Works
+Features:
 
- Dashboard
+* AI-generated questions
+* Answer evaluation
+* Real-time feedback
+* Interview scoring
+* Performance improvement suggestions
 
- Login
+---
 
- Register
+# 📄 AI Resume Analyzer
 
-Landing Page
+Analyze your resume using AI.
 
-Include:
+Features:
 
- Hero section with headline:
-"Crack Your Next Interview with AI"
+* Resume upload
+* ATS compatibility score
+* Skill extraction
+* Missing skill detection
+* Resume improvement suggestions
+* AI-generated resume report
 
- Subtitle explaining the platform
+---
 
- CTA buttons:
+# 🎤 Voice-Based Interview
 
- Start Free Interview
+A realistic voice interview experience.
 
- Explore Features
+Features:
 
- AI-themed illustration
+* Speech-based answers
+* AI voice interaction
+* Communication analysis
+* Confidence evaluation
+* Speaking improvement feedback
 
- Statistics cards
+---
 
- Feature cards
+# 💻 Coding Interview Module
 
- Testimonials
+Prepare for technical coding rounds.
 
- FAQ
+Features:
 
- Footer
+* DSA interview questions
+* Coding challenges
+* Problem-solving evaluation
+* Algorithm-based assessment
 
-Authentication
+---
 
-Create:
+# 📊 AI Interview Analytics
 
- Login Page
+Track your interview preparation progress.
 
- Register Page
+Analytics include:
 
-Login should contain:
+* Overall interview score
+* Technical score
+* Communication score
+* Confidence score
+* Skill improvement tracking
+* AI recommendations
+
+---
+
+# 🧠 AI Technologies Used
+
+The platform is designed to integrate:
+
+* Large Language Models (LLMs)
+* Natural Language Processing
+* Speech Processing
+* Resume Parsing
+* Recommendation Systems
+* Machine Learning Models
+
+---
+
+# 🏗️ System Architecture
+
+```
+                    User
+                     |
+                     |
+              React Frontend
+                     |
+                     |
+              FastAPI Backend
+                     |
+        -----------------------------
+        |             |             |
+     AI Engine    Resume AI     Database
+        |
+        |
+   NLP + LLM Models
+        |
+        |
+ Interview Evaluation
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React.js
+* TypeScript
+* Tailwind CSS
+* React Router
+* Framer Motion
+* React Icons
+
+## Backend
+
+* FastAPI
+* Python
+* REST APIs
+* JWT Authentication
+
+## AI / ML
+
+* Python
+* Natural Language Processing
+* Machine Learning Models
+* LLM APIs
+* Resume Parsing
+
+## Database
+
+Planned:
+
+* PostgreSQL / MongoDB
+
+## Tools
+
+* Git
+* GitHub
+* VS Code
+* Lovable
+* Postman
+
+---
+
+# 📂 Project Structure
+
+```
+InterviewAI/
+
+│
+├── frontend/
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.tsx
+│   │
+│   └── package.json
+│
+│
+├── backend/
+│   │
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── routes/
+│   │   ├── models/
+│   │   ├── services/
+│   │   └── database/
+│   │
+│   └── requirements.txt
+│
+│
+├── ai_models/
+│
+├── datasets/
+│
+├── README.md
+└── .gitignore
+
+```
+
+---
+
+# 🚀 Installation & Setup
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+
+cd InterviewAI
+```
+
+## Frontend Setup
+
+```bash
+cd frontend
+
+npm install
 
- Email
-
- Password
-
- Login button
-
-Register should contain:
-
- Full Name
-
- Email
-
- Password
-
- Confirm Password
-
-Dashboard
-
-After login, display:
-
- Sidebar
-
- Welcome card
-
- Interview statistics
-
- Resume Score card
-
- Recent Interviews
-
- Quick Actions
-
-Sidebar menu:
-
- Dashboard
-
- Start Interview
-
- Resume Analyzer
-
- History
-
- Profile
-
- Settings
-
- Logout
-
-Start Interview
-
-Allow the user to choose:
-
- HR Interview
-
- DSA Interview
-
- Machine Learning
-
- Data Science
-
- System Design
-
- Aptitude
-
-Difficulty:
-
- Easy
-
- Medium
-
- Hard
-
-Include a Start Interview button.
-
-AI Interview Screen
-
-Layout:
-
- Question panel
-
- Timer
-
- Webcam placeholder
-
- Microphone placeholder
-
- Large answer text box
-
- Previous button
-
- Next button
-
- Submit Interview button
-
-Resume Analyzer
-
-Include:
-
- Drag & Drop Resume Upload
-
- ATS Score
-
- Skills Found
-
- Missing Skills
-
- Suggestions
-
- Download Report button
-
-Interview Report
-
-Show:
-
- Overall Score
-
- Technical Score
-
- Communication Score
-
- Confidence Score
-
- Progress bars
-
- Radar chart placeholder
-
- AI Suggestions
-
-Interview History
-
-Show previous interviews in cards with:
-
- Date
-
- Domain
-
- Score
-
- View Report button
-
-Profile
-
-Show:
-
- Profile picture
-
- Name
-
- Email
-
- Skills
-
- Resume Upload
-
- Edit Profile
-
-Settings
-
-Include:
-
- Dark Mode
-
- Notifications
-
- Change Password
-
-Technical Requirements
-
- React
-
- Tailwind CSS
-
- React Router
-
- Axios
-
- Framer Motion
-
- React Icons
-
- Fully responsive
-
- Component-based architecture
-
- Clean folder structure
-
- Use mock data only (no backend integration yet)
-
- Keep all API calls in a separate services folder so they can later be connected to a FastAPI backend.  also make the website in dark theme also Phase 2 (Premium UI)
-
-We'll add these sections one by one:
-
-✅ Hero Section (Done)
-
-⬜ Trusted by Companies
-
-⬜ Features Cards
-
-⬜ AI Demo Section
-
-⬜ How it Works
-
-⬜ Pricing
-
-⬜ Testimonials
-
-⬜ FAQ
-
-⬜ Footer
-
-⬜ Login
-
-⬜ Register
-
-⬜ Dashboard
-
-First let's make the Hero premium
-
-Add these animations:
-
-Floating glowing circles
-
-Gradient blobs
-
-Mouse hover animation
-
-Button glow
-
-Smooth fade-in
-
-Floating AI illustration
-
-Like:
-
-          🤖
-
-Crack Your Dream Interview
-
-      [Start Free]
-
-      [Watch Demo]
-
-★★★★★
-
-10,000+ Students
-
-Then Features Section
-
-Six premium cards.
-
-┌──────────────┐
-
-│ 🤖 Mock AI   │
-
-└──────────────┘
-
-┌──────────────┐
-
-│ 📄 Resume AI │
-
-└──────────────┘
-
-┌──────────────┐
-
-│ 🎤 Voice AI  │
-
-└──────────────┘
-
-┌──────────────┐
-
-│ 💻 Coding    │
-
-└──────────────┘
-
-┌──────────────┐
-
-│ 📊 Reports   │
-
-└──────────────┘
-
-┌──────────────┐
-
-│ 💬 Feedback  │
-
-└──────────────┘
-
-Each card will:
-
-hover up
-
-glow
-
-scale slightly
-
-animate smoothly
-
-Then Dashboard
-
-This will be the real app.
-
-Sidebar
-
-🏠 Dashboard
-
-🎤 Mock Interview
-
-📄 Resume
-
-💻 Coding
-
-📊 Reports
-
-⚙ Settings
-
-Main page:
-
-Welcome Back Sanjeevani 👋
-
-Interview Score
-
-██████████
-
-Resume Score
-
-█████████
-
-Recent Interviews
-
-This is where your FastAPI backend will connect.
-
-My suggestion
-
-Don't jump to login yet.
-
-Let's first finish the entire landing page so that when someone opens your project, they immediately think:
-
-"Wow, this looks like a real startup."
-
-Then we'll connect:
-
-Login
-
-Register
-
-JWT Authentication
-
-Dashboard
-
-Resume Upload
-
-AI Interview
-
-Voice Interview
-
-Reports
-
-We're building this like a production application, one polished piece at a time. 🚀
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://interview-ace-ai-118.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/12b66559-e6e0-48ed-8f8c-14e65cfa6bc5).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
 npm run dev
 ```
+
+Frontend runs on:
+
+```
+http://localhost:5174
+```
+
+## Backend Setup
+
+Create virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate environment:
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend runs on:
+
+```
+http://localhost:8000
+```
+
+---
+
+# 🔐 Authentication
+
+Planned authentication system:
+
+* User Registration
+* Login
+* JWT Authentication
+* Protected Routes
+* User Profiles
+
+---
+
+# 📈 Development Roadmap
+
+## Phase 1 - UI Development ✅
+
+* Premium landing page
+* Responsive design
+* Dark theme
+* Animations
+* Dashboard UI
+
+## Phase 2 - Authentication
+
+* Login/Register
+* JWT authentication
+* User management
+
+## Phase 3 - AI Interview Engine
+
+* AI question generation
+* Answer evaluation
+* Interview scoring
+
+## Phase 4 - Resume Intelligence
+
+* Resume parsing
+* ATS scoring
+* Skill recommendations
+
+## Phase 5 - Advanced AI Features
+
+* Voice interviews
+* Webcam analysis
+* Personalized preparation roadmap
+
+---
+
+# 🌟 Future Enhancements
+
+* Real-time AI interviewer
+* Video interview analysis
+* Face emotion detection
+* Voice confidence analysis
+* Personalized learning paths
+* Mobile application
+* Cloud deployment
+
+---
+
+# 🎯 Project Goal
+
+The goal of InterviewAI is to create an intelligent interview preparation ecosystem where users can practice, analyze, and improve their interview skills using Artificial Intelligence.
+
+---
+
+# 👩‍💻 Author
+
+**Sanjeevani Tyagi**
+
+B.Tech Computer Science & Engineering
+
+Interested in:
+
+* Artificial Intelligence
+* Machine Learning
+* Data Science
+* Full Stack Development
+
+---
+
+# ⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub.
+
+---
+
+© 2026 InterviewAI
