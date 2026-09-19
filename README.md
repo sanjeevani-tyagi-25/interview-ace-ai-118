@@ -370,5 +370,10 @@ Interested in:
 If you find this project useful, consider giving it a ⭐ on GitHub.
 
 ---
+# InterviewAI – AI-Powered Mock Interview Platform
+
+🚀 **Live Demo:** https://interview-ace-ai-118-9ohq-smoky.vercel.app
+
+💻 **GitHub Repository:** https://github.com/sanjeevani-tyagi-25/interview-ace-ai-118
 
 © 2026 InterviewAI
