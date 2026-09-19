@@ -104,6 +104,7 @@ app.add_middleware(
     CORSMiddleware,
 
     allow_origins=[
+        # Local development
         "http://localhost:5173",
         "http://127.0.0.1:5173",
 
@@ -112,6 +113,9 @@ app.add_middleware(
 
         "http://localhost:8080",
         "http://127.0.0.1:8080",
+
+        # Production - Vercel
+        "https://interview-ace-ai-118-9ohq-smoky.vercel.app",
     ],
 
     allow_credentials=True,
